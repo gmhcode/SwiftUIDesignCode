@@ -48,7 +48,7 @@ struct ContentView: View {
             
             BottomCardView()
                 .blur(radius: show ? 20 : 0)
-                .animation(.default)
+                .animation(.easeIn)
         }
     }
 }
