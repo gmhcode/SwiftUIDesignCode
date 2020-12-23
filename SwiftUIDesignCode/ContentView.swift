@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var show = false
-    
+    @State var viewState = CGSize.zero
     var body: some View {
         ZStack {
             TitleView()
@@ -22,6 +22,7 @@ struct ContentView: View {
                 .cornerRadius(20)
                 .shadow(radius: 20)
                 .offset(x: 0, y: show ?  -400 : -40)
+                .offset(x: viewState.width, y: viewState.height)
                 //scale is making the views APPEAR as different sizes, but in reality they are the same size
                 .scaleEffect(0.9)
                 .rotationEffect(.degrees(show ? 0 : 10))
@@ -34,6 +35,7 @@ struct ContentView: View {
                 .cornerRadius(20)
                 .shadow(radius: 20)
                 .offset(x: 0, y: show ?  -200 : -20)
+                .offset(x: viewState.width, y: viewState.height)
                 .scaleEffect(0.95)
                 .rotationEffect(Angle(degrees: show ? 0 : 5))
                 .rotation3DEffect(Angle(degrees: 5), axis: (x: 10.0, y: 0, z: 0.0))
@@ -41,14 +43,28 @@ struct ContentView: View {
                 .animation(.easeInOut(duration: 0.3))
             
             CardView()
+                //This offset is the thing that actuall moves the view
+                .offset(x: viewState.width, y: viewState.height)
+                .animation(.spring(response: 0.3, dampingFraction: 1, blendDuration: 0))
                 .blendMode(.hardLight)
                 .onTapGesture {
                     self.show.toggle()
                 }
+                .gesture(
+                    //This tells the view where its going to be moved to, when it is moved
+                    DragGesture().onChanged { value in
+                        self.viewState = value.translation
+                    }
+                    .onEnded{ value in
+                        self.viewState = .zero
+                        self.show = false
+                    }
+                )
+            
             
             BottomCardView()
                 .blur(radius: show ? 20 : 0)
-                .animation(.easeIn)
+                .animation(.default)
         }
     }
 }
