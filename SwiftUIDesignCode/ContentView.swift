@@ -14,6 +14,10 @@ struct ContentView: View {
     @State var bottomState = CGSize.zero
     @State var showFull = false
     
+    init() {
+        print(screen)
+    }
+    
     var body: some View {
         ZStack {
             TitleView()
