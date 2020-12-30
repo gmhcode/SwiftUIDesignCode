@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		900771CA259C017F00F8BFDE /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900771C9259C017F00F8BFDE /* RingView.swift */; };
 		9044B988259AA7720076F444 /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9044B987259AA7720076F444 /* UpdateList.swift */; };
 		906EA10725940EEF005231D9 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906EA10625940EEF005231D9 /* MenuView.swift */; };
 		907FFB5F259AAF0100406018 /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907FFB5E259AAF0100406018 /* UpdateDetail.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		900771C9259C017F00F8BFDE /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		9044B987259AA7720076F444 /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
 		906EA10625940EEF005231D9 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		907FFB5E259AAF0100406018 /* UpdateDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetail.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				907FFB63259AB3F100406018 /* UpdateStore.swift */,
 				907FFB5E259AAF0100406018 /* UpdateDetail.swift */,
 				90835966259A905500A3DF7C /* HomeView.swift */,
+				900771C9259C017F00F8BFDE /* RingView.swift */,
 				906EA10625940EEF005231D9 /* MenuView.swift */,
 				90C0903F259BFAA0001A47C1 /* TopBar.swift */,
 				90C1B0FF2593B3D000434058 /* Assets.xcassets */,
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				900771CA259C017F00F8BFDE /* RingView.swift in Sources */,
 				907FFB5F259AAF0100406018 /* UpdateDetail.swift in Sources */,
 				90C09040259BFAA0001A47C1 /* TopBar.swift in Sources */,
 				90C1B0FE2593B3CC00434058 /* ContentView.swift in Sources */,
