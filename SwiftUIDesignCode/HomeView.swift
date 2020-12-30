@@ -14,11 +14,10 @@ struct HomeView: View {
         VStack {
             HStack {
                 Text("Watching")
-                    .font(.system(size: 28, weight: .bold) )
+                    .font(.system(size: 28, weight: .bold))
+//                    .modifier(CustomFontModifier(size: 34))
                     .foregroundColor(Color(#colorLiteral(red: 0.1087042176, green: 0.1087042176, blue: 0.1087042176, alpha: 1)))
                     
-                    
-                
                 Spacer()
                 
                 AvatarView(showProfile: $showProfile)
@@ -45,19 +44,11 @@ struct HomeView: View {
             .padding(.leading, 14)
             .padding(.top, 30)
             
-            HStack(spacing: 12.0) {
-                RingView(color1: #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1), color2: #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), width: 44, height: 44, percent: 68, show: .constant(true))
-                VStack(alignment: .leading, spacing: 4.0) {
-                    Text("6 minutes left").font(.subheadline).fontWeight(.bold)
-                    Text("Watched 10 mins today").font(.caption)
-                }
-                
+            ScrollView(.horizontal, showsIndicators: false) {
+                WatchRingsView()
+                    .padding(.horizontal,30)
+                    .padding(.bottom,30)
             }
-            .padding(8)
-            .background(Color.white)
-            .cornerRadius(20)
-            .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
-            .shadow(color: Color.black.opacity(0.1), radius: 20, x: 0, y: 20)
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
@@ -133,3 +124,46 @@ let sectionData = [
     Section(title: "SwiftUI Advanced", text: "20 Sections", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Card6")), color: Color(#colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)))
 ]
 
+
+struct WatchRingsView: View {
+    var body: some View {
+        HStack(spacing: 30.0) {
+            HStack(spacing: 12.0) {
+                RingView(color1: #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1), color2: #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), width: 44, height: 44, percent: 68, show: .constant(true))
+                VStack(alignment: .leading, spacing: 4.0) {
+                    Text("6 minutes left")
+                        .bold()
+                        .modifier(FontModifier(style: .subheadline))
+                    Text("Watched 10 mins today").modifier(FontModifier(style: .caption))
+                }
+                .modifier(FontModifier())
+                
+            }
+            .padding(8)
+            .background(Color.white)
+            .cornerRadius(20)
+            .modifier(ShadowModifier())
+            
+            HStack(spacing: 12.0) {
+                RingView(color1: #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1), color2: #colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1), width: 32, height: 32, percent: 44, show: .constant(true))
+                    
+                    .modifier(FontModifier())
+                
+            }
+            .padding(8)
+            .background(Color.white)
+            .cornerRadius(20)
+            .modifier(ShadowModifier())
+            HStack(spacing: 12.0) {
+                RingView(color1: #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1), color2: #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1), width: 32, height: 32, percent: 44, show: .constant(true))
+                    
+                    .modifier(FontModifier())
+                
+            }
+            .padding(8)
+            .background(Color.white)
+            .cornerRadius(20)
+            .modifier(ShadowModifier())
+        }
+    }
+}
