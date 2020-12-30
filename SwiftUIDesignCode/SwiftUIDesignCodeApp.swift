@@ -11,7 +11,8 @@ import SwiftUI
 struct SwiftUIDesignCodeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TopBar()
+//            ContentView()
         }
     }
 }

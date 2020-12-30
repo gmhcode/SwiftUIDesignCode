@@ -47,6 +47,7 @@ struct UpdateList: View {
                         .padding(.vertical, 8)
                     }
                 }
+                //Mark: - Swipe to Delete
                 .onDelete { index in
                     self.store.updates.remove(at: index.first!)
                 }

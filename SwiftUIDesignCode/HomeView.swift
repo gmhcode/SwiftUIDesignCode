@@ -14,7 +14,10 @@ struct HomeView: View {
         VStack {
             HStack {
                 Text("Watching")
-                    .font(.system(size: 28, weight: .bold))
+                    .font(.system(size: 28, weight: .bold) )
+                    .foregroundColor(Color(#colorLiteral(red: 0.1087042176, green: 0.1087042176, blue: 0.1087042176, alpha: 1)))
+                    
+                    
                 
                 Spacer()
                 
