@@ -37,6 +37,7 @@
 		907FFB64259AB3F100406018 /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907FFB63259AB3F100406018 /* UpdateStore.swift */; };
 		90835962259A80F500A3DF7C /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90835961259A80F500A3DF7C /* Home.swift */; };
 		90835967259A905500A3DF7C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90835966259A905500A3DF7C /* HomeView.swift */; };
+		90A5154F259E7D9B00A0A165 /* CourseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A5154E259E7D9B00A0A165 /* CourseList.swift */; };
 		90C09040259BFAA0001A47C1 /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C0903F259BFAA0001A47C1 /* TopBar.swift */; };
 		90C1B0FC2593B3CC00434058 /* SwiftUIDesignCodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C1B0FB2593B3CC00434058 /* SwiftUIDesignCodeApp.swift */; };
 		90C1B0FE2593B3CC00434058 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C1B0FD2593B3CC00434058 /* ContentView.swift */; };
@@ -94,6 +95,7 @@
 		907FFB63259AB3F100406018 /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
 		90835961259A80F500A3DF7C /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		90835966259A905500A3DF7C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		90A5154E259E7D9B00A0A165 /* CourseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseList.swift; sourceTree = "<group>"; };
 		90C0903F259BFAA0001A47C1 /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
 		90C1B0F82593B3CC00434058 /* SwiftUIDesignCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDesignCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90C1B0FB2593B3CC00434058 /* SwiftUIDesignCodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDesignCodeApp.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				907FFB63259AB3F100406018 /* UpdateStore.swift */,
 				907FFB5E259AAF0100406018 /* UpdateDetail.swift */,
 				90835966259A905500A3DF7C /* HomeView.swift */,
+				90A5154E259E7D9B00A0A165 /* CourseList.swift */,
 				900771CF259D234100F8BFDE /* Modifiers.swift */,
 				900771C9259C017F00F8BFDE /* RingView.swift */,
 				906EA10625940EEF005231D9 /* MenuView.swift */,
@@ -386,6 +389,7 @@
 				900771D0259D234100F8BFDE /* Modifiers.swift in Sources */,
 				907FFB5F259AAF0100406018 /* UpdateDetail.swift in Sources */,
 				90C09040259BFAA0001A47C1 /* TopBar.swift in Sources */,
+				90A5154F259E7D9B00A0A165 /* CourseList.swift in Sources */,
 				90C1B0FE2593B3CC00434058 /* ContentView.swift in Sources */,
 				906EA10725940EEF005231D9 /* MenuView.swift in Sources */,
 				9044B988259AA7720076F444 /* UpdateList.swift in Sources */,
