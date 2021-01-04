@@ -145,7 +145,7 @@ struct CourseView: View {
                 DragGesture().onChanged { value in
                     guard value.translation.height > 300 else { return }
                     guard value.translation.height > 0 else { return }
-                        self.activeView = value.translation
+//                        self.activeView = value.translation
                     
                     
                 }
@@ -167,6 +167,12 @@ struct CourseView: View {
                 }else {
                     self.activeIndex = -1
                 }
+            }
+            
+            if show {
+                CourseDetail(course: course, show: $show, active: $active, activeIndex: $activeIndex)
+                    .background(Color.white)
+                    .animation(nil)
             }
         }
         .frame(height: show ? screen.height : 280)
