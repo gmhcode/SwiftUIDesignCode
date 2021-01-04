@@ -11,10 +11,15 @@ struct CourseList: View {
     @State var courses = courseData
     @State var active = false
     @State var activeIndex = -1
+    @State var activeView = CGSize.zero
+//    var axes: Axis.Set {
+//        return active ? [] : .vertical
+//    }
     
     var body: some View {
+//        var axes: Axis.Set =  active ? [] : .vertical
         ZStack {
-            Color.black.opacity(active ? 0.5 : 0)
+            Color.black.opacity(Double(activeView.height / 500))
                 .edgesIgnoringSafeArea(.all)
             ScrollView {
                 VStack(spacing: 30.0) {
@@ -31,7 +36,7 @@ struct CourseList: View {
                                 course: self.courses[index],
                                 active: $active,
                                 index: index,
-                                activeIndex: self.$activeIndex
+                                activeIndex: self.$activeIndex, activeView: $activeView
                             )
                             //puts the view at the top of the screen
                             .offset(y: self.courses[index].show ? -geometery.frame(in: .global).minY : 0)
@@ -45,6 +50,11 @@ struct CourseList: View {
                         //puts the selected card on top of the other cards
                         .zIndex(self.courses[index].show ? 1 : 0)
                     }
+                    .onAppear {
+                        if active == true {
+                            UIScrollView.appearance().bounces = false
+                        }
+                    }
                 }
                 
                 .frame(width: screen.width)
@@ -53,6 +63,7 @@ struct CourseList: View {
             }
             .statusBar(hidden: active ? true : false)
             .animation(.linear)
+            
         }
     }
 }
@@ -70,6 +81,7 @@ struct CourseView: View {
     @Binding var active: Bool
     var index: Int
     @Binding var activeIndex: Int
+    @Binding var activeView: CGSize
     
     
     var body: some View {
@@ -128,6 +140,24 @@ struct CourseView: View {
             .background(Color(course.color))
             .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
             .shadow(color: Color(course.color).opacity(0.3), radius: 20, x: 0, y: 20)
+            .gesture(
+                show ?
+                DragGesture().onChanged { value in
+                    guard value.translation.height > 300 else { return }
+                    guard value.translation.height > 0 else { return }
+                        self.activeView = value.translation
+                    
+                    
+                }
+                .onEnded { value in
+                    if self.activeView.height > 50 {
+                        self.show = false
+                        self.active = false
+                        self.activeIndex = -1
+                    }
+                    self.activeView = .zero
+                } : nil
+            )
             
             .onTapGesture {
                 self.show.toggle()
@@ -140,7 +170,14 @@ struct CourseView: View {
             }
         }
         .frame(height: show ? screen.height : 280)
+        .scaleEffect(1 - (self.activeView.height / 1000))
+        .rotation3DEffect(
+            Angle(degrees: Double(self.activeView.height / 10)),
+            axis: (x: 0.0, y: 10.0, z: 0.0)
+            )
+        .hueRotation(Angle(degrees: Double(self.activeView.height)))
         .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
+        
         .edgesIgnoringSafeArea(.all)
     }
 }
