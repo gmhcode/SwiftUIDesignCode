@@ -17,7 +17,9 @@ class API {
     func getPost(completion: @escaping ([Post]) -> ()) {
         let url = URL(string: "https://jsonplaceholder.typicode.com/posts")!
         URLSession.shared.dataTask(with: url) { (data, _, _) in
-            let posts = try! JSONDecoder().decode([Post].self, from: data!)
+            guard let data = data else {print("❇️♊️>>>\(#file) \(#line): guard let failed<<<"); return}
+
+            let posts = try! JSONDecoder().decode([Post].self, from: data)
             DispatchQueue.main.async {
                 completion(posts)
             }
