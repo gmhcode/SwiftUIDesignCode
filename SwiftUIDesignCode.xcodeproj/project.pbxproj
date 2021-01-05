@@ -51,6 +51,8 @@
 		90C1B1032593B3D000434058 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90C1B1022593B3D000434058 /* Preview Assets.xcassets */; };
 		90C1B10E2593B3D000434058 /* SwiftUIDesignCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C1B10D2593B3D000434058 /* SwiftUIDesignCodeTests.swift */; };
 		90C1B1192593B3D000434058 /* SwiftUIDesignCodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C1B1182593B3D000434058 /* SwiftUIDesignCodeUITests.swift */; };
+		90D9F67725A5232700AC3FCE /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 90D9F67625A5232700AC3FCE /* SDWebImageSwiftUI */; };
+		90D9F67E25A5290700AC3FCE /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D9F67D25A5290700AC3FCE /* BlurView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +122,7 @@
 		90C1B1142593B3D000434058 /* SwiftUIDesignCodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIDesignCodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90C1B1182593B3D000434058 /* SwiftUIDesignCodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDesignCodeUITests.swift; sourceTree = "<group>"; };
 		90C1B11A2593B3D000434058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90D9F67D25A5290700AC3FCE /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90D9F67725A5232700AC3FCE /* SDWebImageSwiftUI in Frameworks */,
 				907FE5F025A51816009A2CBA /* Contentful in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,6 +221,7 @@
 				900771C9259C017F00F8BFDE /* RingView.swift */,
 				906EA10625940EEF005231D9 /* MenuView.swift */,
 				90C0903F259BFAA0001A47C1 /* TopBar.swift */,
+				90D9F67D25A5290700AC3FCE /* BlurView.swift */,
 				90C1B0FF2593B3D000434058 /* Assets.xcassets */,
 				900771D4259D279F00F8BFDE /* Work_Sans */,
 				90C1B1042593B3D000434058 /* Info.plist */,
@@ -269,6 +274,7 @@
 			name = SwiftUIDesignCode;
 			packageProductDependencies = (
 				907FE5EF25A51816009A2CBA /* Contentful */,
+				90D9F67625A5232700AC3FCE /* SDWebImageSwiftUI */,
 			);
 			productName = SwiftUIDesignCode;
 			productReference = 90C1B0F82593B3CC00434058 /* SwiftUIDesignCode.app */;
@@ -343,6 +349,7 @@
 			mainGroup = 90C1B0EF2593B3CC00434058;
 			packageReferences = (
 				907FE5EE25A51816009A2CBA /* XCRemoteSwiftPackageReference "contentful.swift" */,
+				90D9F67525A5232700AC3FCE /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 90C1B0F92593B3CC00434058 /* Products */;
 			projectDirPath = "";
@@ -413,6 +420,7 @@
 				907FE5E225A511DD009A2CBA /* PostList.swift in Sources */,
 				900771D0259D234100F8BFDE /* Modifiers.swift in Sources */,
 				907FFB5F259AAF0100406018 /* UpdateDetail.swift in Sources */,
+				90D9F67E25A5290700AC3FCE /* BlurView.swift in Sources */,
 				90C09040259BFAA0001A47C1 /* TopBar.swift in Sources */,
 				90A5154F259E7D9B00A0A165 /* CourseList.swift in Sources */,
 				907FE5F525A51A85009A2CBA /* CourseStore.swift in Sources */,
@@ -754,6 +762,14 @@
 				minimumVersion = 5.4.1;
 			};
 		};
+		90D9F67525A5232700AC3FCE /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -761,6 +777,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 907FE5EE25A51816009A2CBA /* XCRemoteSwiftPackageReference "contentful.swift" */;
 			productName = Contentful;
+		};
+		90D9F67625A5232700AC3FCE /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90D9F67525A5232700AC3FCE /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
