@@ -20,7 +20,12 @@ struct CourseList: View {
 //        var axes: Axis.Set =  active ? [] : .vertical
         ZStack {
             Color.black.opacity(Double(activeView.height / 500))
+                .animation(.linear)
                 .edgesIgnoringSafeArea(.all)
+                .onAppear {
+                    print("Hello")
+                    getArray()
+                }
             ScrollView {
                 VStack(spacing: 30.0) {
                     Text("Courses")
