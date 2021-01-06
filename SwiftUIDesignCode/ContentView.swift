@@ -209,7 +209,7 @@ struct BottomCardView: View {
                         .lineSpacing(4)
                 }
                 .padding(20)
-                .background(Color.white)
+                .background(Color("background3"))
                 .cornerRadius(20)
                 .shadow(color: Color.black.opacity(0.2), radius: 20, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 10)
             }

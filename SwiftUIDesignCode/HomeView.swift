@@ -19,7 +19,7 @@ struct HomeView: View {
                     Text("Watching")
                         .font(.system(size: 28, weight: .bold))
     //                    .modifier(CustomFontModifier(size: 34))
-                        .foregroundColor(Color(#colorLiteral(red: 0.1087042176, green: 0.1087042176, blue: 0.1087042176, alpha: 1)))
+                        .foregroundColor(.primary)
                         
                     Spacer()
                     
@@ -30,10 +30,11 @@ struct HomeView: View {
                         print(screen)
                     }) {
                         Image(systemName: "bell")
-                            .renderingMode(.original)
+//                            .renderingMode(.original)
+                            .foregroundColor(.primary)
                             .font(.system(size: 16, weight: .medium))
                             .frame(width: 36, height: 36)
-                            .background(Color.white)
+                            .background(Color("background3"))
                             .clipShape(Circle())
                             .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
                             .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10)
@@ -89,6 +90,7 @@ struct HomeView: View {
                 
                 Spacer()
             }
+            .frame(width: screen.width)
         }
         
     }
@@ -113,7 +115,7 @@ struct SectionView: View {
                 Text(section.title)
                     .font(.system(size: 24, weight: .bold))
                     .frame(width: 160, alignment: .leading)
-                    .foregroundColor(Color.white)
+                    .foregroundColor(.primary)
                 Spacer()
                 Image(section.logo)
             }
@@ -163,7 +165,7 @@ struct WatchRingsView: View {
                 
             }
             .padding(8)
-            .background(Color.white)
+            .background(Color("background3"))
             .cornerRadius(20)
             .modifier(ShadowModifier())
             
@@ -174,7 +176,7 @@ struct WatchRingsView: View {
                 
             }
             .padding(8)
-            .background(Color.white)
+            .background(Color("background3"))
             .cornerRadius(20)
             .modifier(ShadowModifier())
             HStack(spacing: 12.0) {
@@ -184,7 +186,7 @@ struct WatchRingsView: View {
                 
             }
             .padding(8)
-            .background(Color.white)
+            .background(Color("background3"))
             .cornerRadius(20)
             .modifier(ShadowModifier())
         }
