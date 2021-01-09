@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct Buttons: View {
+    @State var tap = false
+    @State var press = false
     var body: some View {
         VStack {
             Text("Button")
@@ -28,12 +30,24 @@ struct Buttons: View {
                     }
                 )
                 .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
-                .shadow(color: Color(#colorLiteral(red: 0.7608050108, green: 0.8164883852, blue: 0.9259157777, alpha: 1)), radius: 20, x: 20, y: 20)
+                .shadow(color: Color(press ? #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0) : #colorLiteral(red: 0.7608050108, green: 0.8164883852, blue: 0.9259157777, alpha: 1)  ), radius: 20, x: 20, y: 20)
                 .shadow(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), radius: 20, x: -20, y: -20)
+                .scaleEffect(tap ? 1.2 : 1)
+                .gesture(LongPressGesture().onChanged { value in
+                    self.tap = true
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                        self.tap = false
+                    }
+                }
+                .onEnded { value in
+                    self.press.toggle()
+                }
+            )
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(#colorLiteral(red: 0.8980392157, green: 0.9333333333, blue: 1, alpha: 1)))
         .edgesIgnoringSafeArea(.all)
+        .animation(.spring(response: 0.5, dampingFraction: 0.5, blendDuration: 0))
     }
 }
 
