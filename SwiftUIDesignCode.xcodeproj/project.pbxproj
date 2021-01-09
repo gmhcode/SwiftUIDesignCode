@@ -53,6 +53,7 @@
 		90C1B1192593B3D000434058 /* SwiftUIDesignCodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C1B1182593B3D000434058 /* SwiftUIDesignCodeUITests.swift */; };
 		90D9F67725A5232700AC3FCE /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 90D9F67625A5232700AC3FCE /* SDWebImageSwiftUI */; };
 		90D9F67E25A5290700AC3FCE /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D9F67D25A5290700AC3FCE /* BlurView.swift */; };
+		90F3CE0A25A6441A0095FBBB /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F3CE0925A6441A0095FBBB /* Buttons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,7 @@
 		90C1B1182593B3D000434058 /* SwiftUIDesignCodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDesignCodeUITests.swift; sourceTree = "<group>"; };
 		90C1B11A2593B3D000434058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90D9F67D25A5290700AC3FCE /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		90F3CE0925A6441A0095FBBB /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 				906EA10625940EEF005231D9 /* MenuView.swift */,
 				90C0903F259BFAA0001A47C1 /* TopBar.swift */,
 				90D9F67D25A5290700AC3FCE /* BlurView.swift */,
+				90F3CE0925A6441A0095FBBB /* Buttons.swift */,
 				90C1B0FF2593B3D000434058 /* Assets.xcassets */,
 				900771D4259D279F00F8BFDE /* Work_Sans */,
 				90C1B1042593B3D000434058 /* Info.plist */,
@@ -431,6 +434,7 @@
 				907FFB64259AB3F100406018 /* UpdateStore.swift in Sources */,
 				90835962259A80F500A3DF7C /* Home.swift in Sources */,
 				907FE58E25A3C63A009A2CBA /* CourseDetail.swift in Sources */,
+				90F3CE0A25A6441A0095FBBB /* Buttons.swift in Sources */,
 				90835967259A905500A3DF7C /* HomeView.swift in Sources */,
 				90C1B0FC2593B3CC00434058 /* SwiftUIDesignCodeApp.swift in Sources */,
 			);
