@@ -7,7 +7,18 @@
 
 import SwiftUI
 
+func haptic(type: UINotificationFeedbackGenerator.FeedbackType) {
+    UINotificationFeedbackGenerator().notificationOccurred(type)
+}
+func impact(type: UIImpactFeedbackGenerator.FeedbackStyle) {
+    UIImpactFeedbackGenerator(style: type).impactOccurred()
+}
+
 struct Buttons: View {
+    func name() {
+
+    }
+
 
     var body: some View {
         VStack(spacing: 50) {
@@ -74,6 +85,7 @@ struct RectangleButton: View {
             .scaleEffect(tap ? 1.2 : 1)
             .gesture(LongPressGesture().onChanged { value in
                 self.tap = true
+                haptic(type: .success)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                     self.tap = false
                 }
@@ -121,6 +133,7 @@ struct CircleButton: View {
                     .stroke(Color.clear, lineWidth: 16)
                     
                     .shadow(color: Color(press ? #colorLiteral(red: 0.7608050108, green: 0.8164883852, blue: 0.9259157777, alpha: 1) : #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), radius:6, x: 5, y: 5)
+                
                     
 //                    .blur(radius: 10)
 
