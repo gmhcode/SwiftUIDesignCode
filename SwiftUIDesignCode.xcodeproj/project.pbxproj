@@ -44,6 +44,7 @@
 		90835962259A80F500A3DF7C /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90835961259A80F500A3DF7C /* Home.swift */; };
 		90835967259A905500A3DF7C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90835966259A905500A3DF7C /* HomeView.swift */; };
 		90A5154F259E7D9B00A0A165 /* CourseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A5154E259E7D9B00A0A165 /* CourseList.swift */; };
+		90B3F09B25AD392C00E57B03 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B3F09A25AD392C00E57B03 /* LoginView.swift */; };
 		90C09040259BFAA0001A47C1 /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C0903F259BFAA0001A47C1 /* TopBar.swift */; };
 		90C1B0FC2593B3CC00434058 /* SwiftUIDesignCodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C1B0FB2593B3CC00434058 /* SwiftUIDesignCodeApp.swift */; };
 		90C1B0FE2593B3CC00434058 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C1B0FD2593B3CC00434058 /* ContentView.swift */; };
@@ -110,6 +111,7 @@
 		90835961259A80F500A3DF7C /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		90835966259A905500A3DF7C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		90A5154E259E7D9B00A0A165 /* CourseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseList.swift; sourceTree = "<group>"; };
+		90B3F09A25AD392C00E57B03 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		90C0903F259BFAA0001A47C1 /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
 		90C1B0F82593B3CC00434058 /* SwiftUIDesignCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDesignCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90C1B0FB2593B3CC00434058 /* SwiftUIDesignCodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDesignCodeApp.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				90C0903F259BFAA0001A47C1 /* TopBar.swift */,
 				90D9F67D25A5290700AC3FCE /* BlurView.swift */,
 				90F3CE0925A6441A0095FBBB /* Buttons.swift */,
+				90B3F09A25AD392C00E57B03 /* LoginView.swift */,
 				90C1B0FF2593B3D000434058 /* Assets.xcassets */,
 				900771D4259D279F00F8BFDE /* Work_Sans */,
 				90C1B1042593B3D000434058 /* Info.plist */,
@@ -436,6 +439,7 @@
 				907FE58E25A3C63A009A2CBA /* CourseDetail.swift in Sources */,
 				90F3CE0A25A6441A0095FBBB /* Buttons.swift in Sources */,
 				90835967259A905500A3DF7C /* HomeView.swift in Sources */,
+				90B3F09B25AD392C00E57B03 /* LoginView.swift in Sources */,
 				90C1B0FC2593B3CC00434058 /* SwiftUIDesignCodeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
