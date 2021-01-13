@@ -12,7 +12,8 @@ struct SwiftUIDesignCodeApp: App {
     var body: some Scene {
         WindowGroup {
 //            CourseList()
-            TopBar()
+//            TopBar()
+            LoginView()
 //            ContentView()
         }
     }
