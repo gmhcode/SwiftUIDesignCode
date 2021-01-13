@@ -49,6 +49,7 @@
 		90ABA6AB25AE7A36009B645E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 90ABA6AA25AE7A36009B645E /* Lottie */; };
 		90ABA6B325AE7A69009B645E /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ABA6B225AE7A69009B645E /* LottieView.swift */; };
 		90ABA6B825AE7BE9009B645E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ABA6B725AE7BE9009B645E /* LoadingView.swift */; };
+		90ABA6BD25AE88FF009B645E /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ABA6BC25AE88FF009B645E /* SuccessView.swift */; };
 		90B3F09B25AD392C00E57B03 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B3F09A25AD392C00E57B03 /* LoginView.swift */; };
 		90C09040259BFAA0001A47C1 /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C0903F259BFAA0001A47C1 /* TopBar.swift */; };
 		90C1B0FC2593B3CC00434058 /* SwiftUIDesignCodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C1B0FB2593B3CC00434058 /* SwiftUIDesignCodeApp.swift */; };
@@ -120,6 +121,7 @@
 		90ABA6A325AE79E4009B645E /* success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success.json; sourceTree = "<group>"; };
 		90ABA6B225AE7A69009B645E /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		90ABA6B725AE7BE9009B645E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		90ABA6BC25AE88FF009B645E /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
 		90B3F09A25AD392C00E57B03 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		90C0903F259BFAA0001A47C1 /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
 		90C1B0F82593B3CC00434058 /* SwiftUIDesignCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDesignCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -250,6 +252,7 @@
 				90ABA6B725AE7BE9009B645E /* LoadingView.swift */,
 				90F3CE0925A6441A0095FBBB /* Buttons.swift */,
 				90B3F09A25AD392C00E57B03 /* LoginView.swift */,
+				90ABA6BC25AE88FF009B645E /* SuccessView.swift */,
 				90C1B0FF2593B3D000434058 /* Assets.xcassets */,
 				90ABA6A125AE79E4009B645E /* Lottie */,
 				900771D4259D279F00F8BFDE /* Work_Sans */,
@@ -468,6 +471,7 @@
 				907FE58E25A3C63A009A2CBA /* CourseDetail.swift in Sources */,
 				90F3CE0A25A6441A0095FBBB /* Buttons.swift in Sources */,
 				90835967259A905500A3DF7C /* HomeView.swift in Sources */,
+				90ABA6BD25AE88FF009B645E /* SuccessView.swift in Sources */,
 				90B3F09B25AD392C00E57B03 /* LoginView.swift in Sources */,
 				90C1B0FC2593B3CC00434058 /* SwiftUIDesignCodeApp.swift in Sources */,
 			);
