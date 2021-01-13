@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import Firebase
 struct LoginView: View {
     
     @State var email = ""
@@ -16,17 +16,25 @@ struct LoginView: View {
     @State var alertMessage = "Something Went Wrong"
     @State var isLoading = false
     @State var isSuccessful = false
+    
+    
     func login() {
         self.hideKeyboard()
         self.isFocused = false
         self.isLoading = true
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             self.isLoading = false
-//                            self.showAlert = true
-            self.isSuccessful = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                self.isSuccessful = false
+            if error != nil {
+                self.alertMessage = error?.localizedDescription ?? ""
+                self.showAlert = true
+            }else {
+                self.isSuccessful = true
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    self.isSuccessful = false
+                    self.email = ""
+                    self.password = ""
+                }
             }
         }
     }
@@ -44,6 +52,7 @@ struct LoginView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
                     .edgesIgnoringSafeArea(.bottom)
                 CoverView()
+                
                 VStack {
                     HStack {
                         Image(systemName: "person.crop.circle.fill")
@@ -91,7 +100,7 @@ struct LoginView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
                 .shadow(color: Color.black.opacity(0.15), radius: 20, x: 0, y: 20)
                 .padding(.horizontal)
-                .offset(y:screen.height/2)
+                .offset(y: isFocused ? (screen.height/3) : screen.height/2)
                 
                 HStack {
                     Text("Forgot Password?").font(.subheadline)
@@ -113,8 +122,9 @@ struct LoginView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
                 .padding()
             }
-            .offset(y: isFocused ? -(screen.height/3) : 0)
-            .animation(isFocused ? .easeInOut : nil)
+//            .offset(y: isFocused ? -300 : 0)
+//            .offset(y: isFocused ? -(screen.height/3) : 0)
+//            .animation(isFocused ? .easeInOut : nil)
             .onTapGesture {
                 self.isFocused = false
                 self.hideKeyboard()
@@ -125,7 +135,7 @@ struct LoginView: View {
             if isSuccessful {
                 SuccessView()
             }
-        }
+        }//.offset(y: isFocused ? (screen.height/3) : 0)
     }
 }
 

@@ -6,11 +6,15 @@
 //
 
 import SwiftUI
-
+import Firebase
 @main
 struct SwiftUIDesignCodeApp: App {
+    init() {
+        FirebaseApp.configure()
+    }
     var body: some Scene {
         WindowGroup {
+            
 //            CourseList()
 //            TopBar()
             LoginView()
