@@ -16,9 +16,10 @@ struct SwiftUIDesignCodeApp: App {
         WindowGroup {
             
 //            CourseList()
-//            TopBar()
-            LoginView()
-//            ContentView()
+            TopBar().environmentObject(UserStore())
+//            Home().environmentObject(UserStore())
+//            LoginView().environmentObject(UserStore())
+//            ContentView().environmentObject(UserStore())
         }
     }
 }

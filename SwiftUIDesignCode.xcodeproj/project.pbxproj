@@ -38,7 +38,7 @@
 		907FE5DD25A51087009A2CBA /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907FE5DC25A51086009A2CBA /* Data.swift */; };
 		907FE5E225A511DD009A2CBA /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907FE5E125A511DD009A2CBA /* PostList.swift */; };
 		907FE5EA25A51473009A2CBA /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907FE5E925A51473009A2CBA /* DataStore.swift */; };
-		907FE5F025A51816009A2CBA /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 907FE5EF25A51816009A2CBA /* SwiftPackageProductDependency */; };
+		907FE5F025A51816009A2CBA /* Contentful in Frameworks */ = {isa = PBXBuildFile; productRef = 907FE5EF25A51816009A2CBA /* Contentful */; };
 		907FE5F525A51A85009A2CBA /* CourseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907FE5F425A51A85009A2CBA /* CourseStore.swift */; };
 		907FFB5F259AAF0100406018 /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907FFB5E259AAF0100406018 /* UpdateDetail.swift */; };
 		907FFB64259AB3F100406018 /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907FFB63259AB3F100406018 /* UpdateStore.swift */; };
@@ -47,7 +47,7 @@
 		90A5154F259E7D9B00A0A165 /* CourseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A5154E259E7D9B00A0A165 /* CourseList.swift */; };
 		90ABA6A425AE79E4009B645E /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 90ABA6A225AE79E4009B645E /* loading.json */; };
 		90ABA6A525AE79E4009B645E /* success.json in Resources */ = {isa = PBXBuildFile; fileRef = 90ABA6A325AE79E4009B645E /* success.json */; };
-		90ABA6AB25AE7A36009B645E /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 90ABA6AA25AE7A36009B645E /* SwiftPackageProductDependency */; };
+		90ABA6AB25AE7A36009B645E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 90ABA6AA25AE7A36009B645E /* Lottie */; };
 		90ABA6B325AE7A69009B645E /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ABA6B225AE7A69009B645E /* LottieView.swift */; };
 		90ABA6B825AE7BE9009B645E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ABA6B725AE7BE9009B645E /* LoadingView.swift */; };
 		90ABA6BD25AE88FF009B645E /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ABA6BC25AE88FF009B645E /* SuccessView.swift */; };
@@ -60,7 +60,8 @@
 		90C1B1032593B3D000434058 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90C1B1022593B3D000434058 /* Preview Assets.xcassets */; };
 		90C1B10E2593B3D000434058 /* SwiftUIDesignCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C1B10D2593B3D000434058 /* SwiftUIDesignCodeTests.swift */; };
 		90C1B1192593B3D000434058 /* SwiftUIDesignCodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C1B1182593B3D000434058 /* SwiftUIDesignCodeUITests.swift */; };
-		90D9F67725A5232700AC3FCE /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 90D9F67625A5232700AC3FCE /* SwiftPackageProductDependency */; };
+		90D32ADD25B8D1B500D7929B /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D32ADC25B8D1B400D7929B /* UserStore.swift */; };
+		90D9F67725A5232700AC3FCE /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 90D9F67625A5232700AC3FCE /* SDWebImageSwiftUI */; };
 		90D9F67E25A5290700AC3FCE /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D9F67D25A5290700AC3FCE /* BlurView.swift */; };
 		90F3CE0A25A6441A0095FBBB /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F3CE0925A6441A0095FBBB /* Buttons.swift */; };
 		B0D0929624CB01AAE1279736 /* Pods_SwiftUIDesignCodeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355491C3CDFBCA773A931F94 /* Pods_SwiftUIDesignCodeTests.framework */; };
@@ -146,6 +147,7 @@
 		90C1B1142593B3D000434058 /* SwiftUIDesignCodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIDesignCodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90C1B1182593B3D000434058 /* SwiftUIDesignCodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDesignCodeUITests.swift; sourceTree = "<group>"; };
 		90C1B11A2593B3D000434058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90D32ADC25B8D1B400D7929B /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
 		90D9F67D25A5290700AC3FCE /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		90F3CE0925A6441A0095FBBB /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		95EDB7EDFE3DD42C485261B1 /* Pods-SwiftUIDesignCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIDesignCode.release.xcconfig"; path = "Target Support Files/Pods-SwiftUIDesignCode/Pods-SwiftUIDesignCode.release.xcconfig"; sourceTree = "<group>"; };
@@ -159,9 +161,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90D9F67725A5232700AC3FCE /* BuildFile in Frameworks */,
-				907FE5F025A51816009A2CBA /* BuildFile in Frameworks */,
-				90ABA6AB25AE7A36009B645E /* BuildFile in Frameworks */,
+				90D9F67725A5232700AC3FCE /* SDWebImageSwiftUI in Frameworks */,
+				907FE5F025A51816009A2CBA /* Contentful in Frameworks */,
+				90ABA6AB25AE7A36009B645E /* Lottie in Frameworks */,
 				872C464AE72C08021D82E810 /* Pods_SwiftUIDesignCode.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,10 +254,10 @@
 				90C1B0FB2593B3CC00434058 /* SwiftUIDesignCodeApp.swift */,
 				90C1B0FD2593B3CC00434058 /* ContentView.swift */,
 				90835961259A80F500A3DF7C /* Home.swift */,
+				90835966259A905500A3DF7C /* HomeView.swift */,
 				9044B987259AA7720076F444 /* UpdateList.swift */,
 				907FFB63259AB3F100406018 /* UpdateStore.swift */,
 				907FFB5E259AAF0100406018 /* UpdateDetail.swift */,
-				90835966259A905500A3DF7C /* HomeView.swift */,
 				90A5154E259E7D9B00A0A165 /* CourseList.swift */,
 				907FE5F425A51A85009A2CBA /* CourseStore.swift */,
 				907FE58D25A3C63A009A2CBA /* CourseDetail.swift */,
@@ -271,6 +273,7 @@
 				90ABA6B725AE7BE9009B645E /* LoadingView.swift */,
 				90F3CE0925A6441A0095FBBB /* Buttons.swift */,
 				90B3F09A25AD392C00E57B03 /* LoginView.swift */,
+				90D32ADC25B8D1B400D7929B /* UserStore.swift */,
 				90ABA6BC25AE88FF009B645E /* SuccessView.swift */,
 				90C1B0FF2593B3D000434058 /* Assets.xcassets */,
 				90ABA6A125AE79E4009B645E /* Lottie */,
@@ -328,7 +331,6 @@
 				C61C8E4F7FEB30513B8A204B /* Pods-SwiftUIDesignCodeTests.debug.xcconfig */,
 				40F24EA7CDE356E1947536C0 /* Pods-SwiftUIDesignCodeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -351,9 +353,9 @@
 			);
 			name = SwiftUIDesignCode;
 			packageProductDependencies = (
-				907FE5EF25A51816009A2CBA /* SwiftPackageProductDependency */,
-				90D9F67625A5232700AC3FCE /* SwiftPackageProductDependency */,
-				90ABA6AA25AE7A36009B645E /* SwiftPackageProductDependency */,
+				907FE5EF25A51816009A2CBA /* Contentful */,
+				90D9F67625A5232700AC3FCE /* SDWebImageSwiftUI */,
+				90ABA6AA25AE7A36009B645E /* Lottie */,
 			);
 			productName = SwiftUIDesignCode;
 			productReference = 90C1B0F82593B3CC00434058 /* SwiftUIDesignCode.app */;
@@ -430,9 +432,9 @@
 			);
 			mainGroup = 90C1B0EF2593B3CC00434058;
 			packageReferences = (
-				907FE5EE25A51816009A2CBA /* RemoteSwiftPackageReference */,
-				90D9F67525A5232700AC3FCE /* RemoteSwiftPackageReference */,
-				90ABA6A925AE7A36009B645E /* RemoteSwiftPackageReference */,
+				907FE5EE25A51816009A2CBA /* XCRemoteSwiftPackageReference "contentful.swift" */,
+				90D9F67525A5232700AC3FCE /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				90ABA6A925AE7A36009B645E /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 90C1B0F92593B3CC00434058 /* Products */;
 			projectDirPath = "";
@@ -610,6 +612,7 @@
 				90ABA6B825AE7BE9009B645E /* LoadingView.swift in Sources */,
 				900771D0259D234100F8BFDE /* Modifiers.swift in Sources */,
 				907FFB5F259AAF0100406018 /* UpdateDetail.swift in Sources */,
+				90D32ADD25B8D1B500D7929B /* UserStore.swift in Sources */,
 				90D9F67E25A5290700AC3FCE /* BlurView.swift in Sources */,
 				90C09040259BFAA0001A47C1 /* TopBar.swift in Sources */,
 				90A5154F259E7D9B00A0A165 /* CourseList.swift in Sources */,
@@ -956,7 +959,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		907FE5EE25A51816009A2CBA /* RemoteSwiftPackageReference */ = {
+		907FE5EE25A51816009A2CBA /* XCRemoteSwiftPackageReference "contentful.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/contentful/contentful.swift.git";
 			requirement = {
@@ -964,7 +967,7 @@
 				minimumVersion = 5.4.1;
 			};
 		};
-		90ABA6A925AE7A36009B645E /* RemoteSwiftPackageReference */ = {
+		90ABA6A925AE7A36009B645E /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
 			requirement = {
@@ -972,7 +975,7 @@
 				minimumVersion = 3.1.9;
 			};
 		};
-		90D9F67525A5232700AC3FCE /* RemoteSwiftPackageReference */ = {
+		90D9F67525A5232700AC3FCE /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
 			requirement = {
@@ -983,19 +986,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		907FE5EF25A51816009A2CBA /* SwiftPackageProductDependency */ = {
+		907FE5EF25A51816009A2CBA /* Contentful */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 907FE5EE25A51816009A2CBA /* RemoteSwiftPackageReference */;
+			package = 907FE5EE25A51816009A2CBA /* XCRemoteSwiftPackageReference "contentful.swift" */;
 			productName = Contentful;
 		};
-		90ABA6AA25AE7A36009B645E /* SwiftPackageProductDependency */ = {
+		90ABA6AA25AE7A36009B645E /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 90ABA6A925AE7A36009B645E /* RemoteSwiftPackageReference */;
+			package = 90ABA6A925AE7A36009B645E /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
 		};
-		90D9F67625A5232700AC3FCE /* SwiftPackageProductDependency */ = {
+		90D9F67625A5232700AC3FCE /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 90D9F67525A5232700AC3FCE /* RemoteSwiftPackageReference */;
+			package = 90D9F67525A5232700AC3FCE /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
