@@ -35,7 +35,7 @@ struct MenuView: View {
                         self.user.isLogged = false
                     }
             }
-            .frame(maxWidth: .infinity)
+            .frame(maxWidth: 500)
             .frame(height:300)
             .background(BlurView(style: .systemMaterial))
             .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
