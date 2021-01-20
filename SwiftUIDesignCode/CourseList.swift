@@ -4,7 +4,7 @@
 //
 //  Created by Greg Hughes on 12/31/20.
 //
-
+//MARK: - Environment size classes
 import SwiftUI
 import SDWebImageSwiftUI
 struct CourseList: View {
@@ -12,64 +12,83 @@ struct CourseList: View {
     @State var active = false
     @State var activeIndex = -1
     @State var activeView = CGSize.zero
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
 //    var axes: Axis.Set {
 //        return active ? [] : .vertical
 //    }
     
     var body: some View {
 //        var axes: Axis.Set =  active ? [] : .vertical
-        ZStack {
-            Color.black.opacity(Double(activeView.height / 500))
-                .animation(.linear)
-                .edgesIgnoringSafeArea(.all)
-                
-            ScrollView {
-                VStack(spacing: 30.0) {
-                    Text("Courses")
-                        .font(.largeTitle).bold()
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.leading,30)
-                        .padding(.top, 30)
-                        .blur(radius: active ? 20 : 0)
-                    ForEach(store.courses.indices, id: \.self) { index in
-                        GeometryReader { geometery in
-                            CourseView(
-                                show: self.$store.courses[index].show,
-                                course: self.store.courses[index],
-                                active: $active,
-                                index: index,
-                                activeIndex: self.$activeIndex, activeView: $activeView
-                            )
-                            //puts the view at the top of the screen
-                            .offset(y: self.store.courses[index].show ? -geometery.frame(in: .global).minY : 0)
-                            .opacity(self.activeIndex != index && self.active ? 0 : 1)
-                            .scaleEffect(self.activeIndex != index && self.active ? 0.5 : 1)
-                            .offset(x: self.activeIndex != index && self.active ? screen.width : 0)
+        GeometryReader { bounds in
+            ZStack {
+                Color.black.opacity(Double(activeView.height / 500))
+                    .animation(.linear)
+                    .edgesIgnoringSafeArea(.all)
+                    
+                ScrollView {
+                    VStack(spacing: 30.0) {
+                        Text("Courses")
+                            .font(.largeTitle).bold()
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.leading,30)
+                            .padding(.top, 30)
+                            .blur(radius: active ? 20 : 0)
+                        ForEach(store.courses.indices, id: \.self) { index in
+                            GeometryReader { geometery in
+                                CourseView(
+                                    show: self.$store.courses[index].show,
+                                    course: self.store.courses[index],
+                                    active: $active,
+                                    index: index,
+                                    activeIndex: self.$activeIndex,
+                                    activeView: $activeView,
+                                    bounds: bounds
+                                )
+                                //puts the view at the top of the screen
+                                .offset(y: self.store.courses[index].show ? -geometery.frame(in: .global).minY : 0)
+                                .opacity(self.activeIndex != index && self.active ? 0 : 1)
+                                .scaleEffect(self.activeIndex != index && self.active ? 0.5 : 1)
+                                .offset(x: self.activeIndex != index && self.active ? bounds.size.width : 0)
+                            }
+                            .frame(height: horizontalSizeClass == .regular ? 80 : 280)
+                            //                    .frame(height: self.courses[index].show ? screen.height : 280)
+                            .frame(maxWidth: self.store.courses[index].show ? 712 : getCardWidth(bounds: bounds))
+                            //puts the selected card on top of the other cards
+                            .zIndex(self.store.courses[index].show ? 1 : 0)
                         }
-                        .frame(height: 280)
-                        //                    .frame(height: self.courses[index].show ? screen.height : 280)
-                        .frame(maxWidth: self.store.courses[index].show ? .infinity : screen.width - 60)
-                        //puts the selected card on top of the other cards
-                        .zIndex(self.store.courses[index].show ? 1 : 0)
+//                        .onAppear {
+//                            if active == true {
+//                                UIScrollView.appearance().bounces = false
+//                            }
+//                        }
                     }
-                    .onAppear {
-                        if active == true {
-                            UIScrollView.appearance().bounces = false
-                        }
-                    }
+                    
+                    .frame(width: bounds.size.width)
+                    .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
+                    
                 }
-                
-                .frame(width: screen.width)
-                .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
+                .statusBar(hidden: active ? true : false)
+                .animation(.linear)
                 
             }
-            .statusBar(hidden: active ? true : false)
-            .animation(.linear)
-            
         }
     }
 }
+func getCardWidth(bounds: GeometryProxy) -> CGFloat {
+    if bounds.size.width > 712 {
+        return 712
+    }
+    
+    return bounds.size.width - 60
+}
 
+func getCardCornerRadius(bounds: GeometryProxy) -> CGFloat {
+    if bounds.size.width < 712 && bounds.safeAreaInsets.top < 44 {
+        return 0
+    }
+    
+    return 30
+}
 struct CourseList_Previews: PreviewProvider {
     static var previews: some View {
         CourseList()
@@ -84,14 +103,16 @@ struct CourseView: View {
     var index: Int
     @Binding var activeIndex: Int
     @Binding var activeView: CGSize
-    
+    var bounds: GeometryProxy
     
     var body: some View {
         ZStack(alignment: .top) {
             VStack(alignment: .leading, spacing: 30.0) {
                 Text("Take your SwiftUI app to the App Store with advanced techniques like API data, packages and CMS.")
+                
                 Text("About this course")
                     .font(.title).bold()
+                
                 Text("This course is unlike any other. We care about design and want to make sure that you get better at it in the process. It was written for designers and developers who are passionate about collaborating and building real apps for iOS and macOS. While it's not one codebase for all apps, you learn once and can apply the techniques and controls to all platforms with incredible quality, consistency and performance. It's beginner-friendly, but it's also packed with design tricks and efficient workflows for building great user interfaces and interactions.")
                 
                 Text("Minimal coding experience required, such as in HTML and CSS. Please note that Xcode 11 and Catalina are essential. Once you get everything installed, it'll get a lot friendlier! I added a bunch of troubleshoots at the end of this page to help you navigate the issues you might encounter.")
@@ -100,22 +121,23 @@ struct CourseView: View {
             .frame(maxWidth: show ? .infinity : screen.width - 60, maxHeight: show ? .infinity : 280, alignment: .top)
             .offset(y: show ? 460 : 0)
             .background(Color("background2"))
-            .clipShape(RoundedRectangle(cornerRadius:30, style: .continuous))
-            .shadow(color:Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
+            .clipShape(RoundedRectangle(cornerRadius: show ? getCardCornerRadius(bounds: bounds) : 30, style: .continuous))
+            .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
             .opacity(show ? 1 : 0)
-        
             
             VStack {
                 HStack(alignment: .top) {
                     VStack(alignment: .leading, spacing: 8.0) {
-                        Text(course.title).font(.system(size: 24, weight: .bold))
+                        Text(course.title)
+                            .font(.system(size: 24, weight: .bold))
                             .foregroundColor(.white)
                         Text(course.subtitle)
                             .foregroundColor(Color.white.opacity(0.7))
                     }
                     Spacer()
                     ZStack {
-                        Image(uiImage: course.logo).opacity(show ? 0 : 1)
+                        Image(uiImage: course.logo)
+                            .opacity(show ? 0 : 1)
                         
                         VStack {
                             Image(systemName: "xmark")
@@ -133,7 +155,7 @@ struct CourseView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(maxWidth: .infinity)
-                    .frame(height: 140, alignment: .top )
+                    .frame(height: 140, alignment: .top)
             }
             .padding(show ? 30 : 20)
             .padding(.top, show ? 30 : 0)
@@ -141,14 +163,14 @@ struct CourseView: View {
             .frame(maxWidth: show ? .infinity : screen.width - 60, maxHeight: show ? 460 : 280)
             
             .background(Color(course.color))
-            .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
+            .clipShape(RoundedRectangle(cornerRadius: show ? getCardCornerRadius(bounds:bounds) : 30, style: .continuous))
             .shadow(color: Color(course.color).opacity(0.3), radius: 20, x: 0, y: 20)
             .gesture(
                 show ?
                 DragGesture().onChanged { value in
                     guard value.translation.height > 300 else { return }
                     guard value.translation.height > 0 else { return }
-//                        self.activeView = value.translation
+                        self.activeView = value.translation
                     
                     
                 }
@@ -178,7 +200,7 @@ struct CourseView: View {
                     .animation(nil)
             }
         }
-        .frame(height: show ? screen.height : 280)
+        .frame(height: show ? bounds.size.height + bounds.safeAreaInsets.top + bounds.safeAreaInsets.bottom : 280)
         .scaleEffect(1 - (self.activeView.height / 1000))
         .rotation3DEffect(
             Angle(degrees: Double(self.activeView.height / 10)),
