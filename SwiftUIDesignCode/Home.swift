@@ -122,7 +122,7 @@ struct AvatarView: View {
     @EnvironmentObject var user: UserStore
     var body: some View {
         VStack {
-            if !user.isLogged {
+            if user.isLogged {
                 Button(action: {self.showProfile.toggle()}) {
                 Image("Avatar")
                     .resizable()

@@ -17,6 +17,7 @@ struct HomeView: View {
     @State var activeIndex = -1
     @State var activeView = CGSize.zero
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    @State var isScrollable = false
     var body: some View {
         GeometryReader { bounds in
             ScrollView {
@@ -104,7 +105,8 @@ struct HomeView: View {
                                     index: index,
                                     activeIndex: self.$activeIndex,
                                     activeView: $activeView,
-                                    bounds: bounds
+                                    bounds: bounds,
+                                    isScrollable: $isScrollable
                                 )
                                 //puts the view at the top of the screen
                                 .offset(y: self.store.courses[index].show ? -geometery.frame(in: .global).minY : 0)
@@ -134,6 +136,7 @@ struct HomeView: View {
                     
                     .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
             }
+            .disabled(self.active && !isScrollable ? true : false)
         }
         
     }
