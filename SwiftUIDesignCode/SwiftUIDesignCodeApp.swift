@@ -15,9 +15,9 @@ struct SwiftUIDesignCodeApp: App {
     var body: some Scene {
         WindowGroup {
             
-            CourseList().environmentObject(UserStore())
+//            CourseList().environmentObject(UserStore())
 //            TopBar().environmentObject(UserStore())
-//            Home().environmentObject(UserStore())
+            Home().environmentObject(UserStore())
 //            LoginView().environmentObject(UserStore())
 //            ContentView().environmentObject(UserStore())
         }

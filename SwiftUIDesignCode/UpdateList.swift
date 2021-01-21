@@ -50,7 +50,7 @@ struct UpdateList: View {
                 //Mark: - Swipe to Delete
                 .onDelete { index in
                     self.store.updates.remove(at: index.first!)
-                }
+                } 
                 .onMove { (source: IndexSet, destination: Int) in
                     self.store.updates.move(fromOffsets: source, toOffset: destination)
                 }

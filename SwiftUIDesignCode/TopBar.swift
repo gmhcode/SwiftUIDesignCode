@@ -25,7 +25,8 @@ struct TopBar: View {
 
 struct TopBar_Previews: PreviewProvider {
     static var previews: some View {
-        TopBar().previewDevice("iPhone 8")
+//        TopBar().previewDevice("iPhone 8")
         TopBar().previewDevice("iPhone 11 Pro Max")
+            .environmentObject(UserStore())
     }
 }
